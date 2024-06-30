@@ -667,7 +667,7 @@ command:  **halt  genera  :query  no**
   
 Update .VLM to point to Symbolics.vlod  
   
-The [Symbolics](https://github.com/JMlisp/og2vlm/blob/main/screenshots/Symbolics.png) screenshot shows the initial screen and [Kronos-lmfs-tree](https://github.com/JMlisp/og2vlm/blob/main/screenshots/Kronos-lmfs-tree.png) shows the a part of the "Tree Edit Root" directory listing of the Jupiter-Kronos Symbolics world.  
+The [Symbolics](https://github.com/JMlisp/og2vlm/blob/main/screenshots/Symbolics.png) screenshot shows the initial screen and [Kronos-lmfs-tree](https://github.com/JMlisp/og2vlm/blob/main/screenshots/Kronos-lmfs-tree.png) the first part of the "Tree Edit Root" directory listing of the Jupiter-Kronos Symbolics world.  
   
 Shutdown Debian, optionally backup the Symbolics world, by creating a VM Symbolics.ova.  
   
