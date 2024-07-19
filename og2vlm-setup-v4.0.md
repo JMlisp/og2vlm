@@ -1,24 +1,23 @@
 
-OpenGenera Installation Procedure V4.0:
-=======================================
+# OpenGenera Installation Procedure V4.0
 
 
 Table of Contents:
 
-- Install VirtualBox and Debian onto your PC or Mac
-- Install Guest Additions onto VirtualBox Debian
-- Make macOS ready for OpenGenera
-- Make Debian ready for OpenGenera
-- Prepare Debian and OG2 to host the LMFS system
-- Attach FEP disks and create a LMFS partition
-- Activate the LMFS system at Boot Time and Create the Initial world
-- Prepare to create a Symbolics World
-- Create a Symbolics world containing the most important systems
-- Let OpenGenera talk to the Internet via the virtual TAP device
-- Emulate a Symbolics space-cadet keyboard using a Mac or PC keyboard
-- Send the Lisp Listener screen to the X Server of a LAN host
-- Install and set up a Telnet service onto a Debian-based host
-- Connect from OG2 to its Debian-based Genera-host via Telnet
+- [Install VirtualBox and Debian onto your PC or Mac](#install-virtualbox-and-debian-onto-your-pc-or-mac)
+- [Install Guest Additions onto VirtualBox Debian](#install-guest-additions-onto-virtualbox-debian)
+- [Make macOS ready for OpenGenera](#make-macos-ready-for-opengenera)
+- [Make Debian ready for OpenGenera](#make-debian-ready-for-opengenera)
+- [Prepare Debian and OG2 to host the LMFS system](#prepare-debian-and-og2-to-host-the-lmfs-system)
+- [Attach FEP disks and create a LMFS partition](#attach-fep-disks-and-create-a-lmfs-partition)
+- [Activate the LMFS system at Boot Time and Create the Initial world](#activate-the-lmfs-system-at-boot-time-and-create-the-initial-world)
+- [Prepare to create a Symbolics World](#prepare-to-create-a-symbolics-world)
+- [Create a Symbolics world containing the most important systems](#create-a-symbolics-world-containing-the-most-important-systems)
+- [Let OpenGenera talk to the Internet via the virtual TAP device](#let-opengenera-talk-to-the-internet-via-the-virtual-tap-device)
+- [Emulate a Symbolics space-cadet keyboard using a Mac or PC keyboard](#emulate-a-symbolics-space-cadet-keyboard-using-a-mac-or-pc-keyboard)
+- [Send the Lisp Listener screen to the X Server of a LAN host](#send-the-lisp-listener-screen-to-the-x-server-of-a-lan-host)
+- [Install and set up a Telnet service onto a Debian-based host](#install-and-set-up-a-telnet-service-onto-a-debian-based-host)
+- [Connect from OG2 to its Debian-based Genera-host via Telnet](#connect-from-og2-to-its-debian-based-genera-host-via-telnet)
 
 
 Overview:
@@ -28,8 +27,7 @@ This procedure describes how to install OpenGenera (OG2) onto Debian Linux, whic
 If Debian runs on its own disk or partition, proceed as follows, ignoring any section and steps related to VirtualBox (VB) and VMs. Notice, however, that the description provided below is based on a sequential approach. That is, in order for a specific section to be successfully implemented, the steps of all the previous relevant sections must have been fully and correctly implemented. I.e, proceed step by step, as follows:
   
   
-Install VirtualBox and Debian onto your PC or Mac:  
---------------------------------------------------  
+## Install VirtualBox and Debian onto your PC or Mac
   
 On amd64, preferably install VirtualBox (VB) V5.2.30 and Debian V9.4, being both the latest versions validated with OG2, and all necessary drivers and packages you usually require for a development environment. We will assume that you have already created a user and, for the reminder of this document, the username used will be "jm"; and the default umask of "0022" is applied to "jm" and "root".  
   
@@ -52,7 +50,7 @@ $  Login:  **jm**
 password:  ********  
  
 | Adjust Preferences: |	Modify settings as appropriate: | Parameter: | Value:  | Comment: |
-| --- | --- | --- | --- | --- |
+|:--- |:--- |:--- |:--- |:--- |
 | Desktop Preferences:| Text Font of label text: |   | Sans 8 |   |
 | Screensaver Preferences: | Fiberlamp Blank After: |   | 30 minutes |   |
 | Configure: | Internet > | Wicd Network Manager: |   |   |
@@ -107,8 +105,7 @@ Open the pop-up window if minimised, click OK to enter in the File Manager, ejec
 Close LXTerminal and shut down the Debian VM.  
   
   
-Install Guest Additions onto VirtualBox Debian:  
------------------------------------------------  
+## Install Guest Additions onto VirtualBox Debian
   
 Benefit from additional features by installing Guest Additions onto a Debian running in VirtualBox. Among these features there is a better mouse integration and a better video support, allowing you to resize windows to the size your applications require.  
   
@@ -171,8 +168,7 @@ password:  ********
 Adjust the window size of the Jupiter Debian VM as you wish it to be, and proceed with the sections necessary for your system.  
   
   
-Make macOS ready for OpenGenera:  
---------------------------------  
+## Make macOS ready for OpenGenera
   
 From website www.xquartz.org download and install XQuartz-2.7.11.dmg.  
   
@@ -244,8 +240,7 @@ Notice, however, changes in the “Transparency, Consent, and Control” (TCC) f
 Reboot the Mac to activate NFS.  
   
   
-Make Debian ready for OpenGenera:
----------------------------------
+## Make Debian ready for OpenGenera
  
 Start and log into the Debian VM Jupiter, if not already running:  
 $  Login:  **jm**  
@@ -311,8 +306,7 @@ root: **su - jm**
 From now on, all the following actions will be run as "jm". Verify that "jm" is in the proper sudo group, otherwise logout and login again.  
  
 
-Prepare Debian and OG2 to host the LMFS system:
------------------------------------------------
+## Prepare Debian and OG2 to host the LMFS system
  
 Decompress the archive og2vlm-kit.zip into the folder $HOME/Downloads/. The archive og2vlm-kit.zip provides a ready to use OG2 distribution world named Genera-8-5e, which includes both NFSv3 Client and LMFS capability for the VLM, translations files, genera binaries for X86 and Xeon based platforms, as well as functions and commands necessary to create FEP disks, a LMFS partition, and an Initial world, without the need to disable Debian’s calendar clock prior to the installation and the subsequent launch of OpenGenera.  
    
@@ -429,8 +423,7 @@ $  **sudo  cat  /proc/fs/nfsd/versions**
 Close the LXTerminal and shut down the Debian VM Jupiter.  
   
   
-Attach FEP disks and create a LMFS partition:  
----------------------------------------------  
+## Attach FEP disks and create a LMFS partition
   
 Boot the Debian host Jupiter and log in as "jm".  
  
@@ -505,8 +498,7 @@ Shut down in order to reboot OG2, i.e enter:
 command:  **halt  genera  :query  no**  
   
   
-Activate the LMFS system at Boot Time and Create the Initial world:  
--------------------------------------------------------------------  
+## Activate the LMFS system at Boot Time and Create the Initial world
   
 From within the same LXTerminal folder ~/vlm, enter:  
 $  **./genera  -network  "tap0:INTERNET|192.168.6.2;gateway=192.168.6.1"**  
@@ -586,8 +578,7 @@ The [Initial](https://github.com/JMlisp/og2vlm/blob/main/screenshots/Initial.png
 Close LXTerminal, shutdown Jupiter, and optionally backup the Initial world by creating a VM Initial.ova.  
   
   
-Prepare to create a Symbolics World:  
-------------------------------------  
+## Prepare to create a Symbolics World
    
 Boot the Debian host Jupiter and log in as "jm".  
   
@@ -632,8 +623,7 @@ command:  **compile  file  (File)  j:/home/jm/Downloads/w85.lisp**
 command:  **halt  genera  :query  no**  
   
   
-Create a Symbolics world containing the most important systems:  
----------------------------------------------------------------  
+## Create a Symbolics world containing the most important systems
   
 Reboot the Debian host Jupiter and log in as "jm".  
 
@@ -672,8 +662,7 @@ The [Symbolics](https://github.com/JMlisp/og2vlm/blob/main/screenshots/Symbolics
 Shutdown Debian, optionally backup the Symbolics world, by creating a VM Symbolics.ova.  
   
   
-Let OpenGenera talk to the Internet via the virtual TAP device:  
----------------------------------------------------------------  
+## Let OpenGenera talk to the Internet via the virtual TAP device
   
 Define Routing Tables in the Host OS and IPTABLES rules in the Guest OS:  
   
@@ -840,8 +829,7 @@ Path to tree edit: (default ....) S:/Users/*
 command:  **halt genera :query no**  
   
   
-Emulate a Symbolics space-cadet keyboard using a Mac or PC keyboard:  
---------------------------------------------------------------------  
+## Emulate a Symbolics space-cadet keyboard using a Mac or PC keyboard
   
 For safety, save a copy of the actual Debian Xmodmap into your $HOME folder:  
 $ **xmodmap -pke > xmodmap.deb**  
@@ -882,7 +870,7 @@ command:  **Show Keyboard Layout (a keyboard-layout) Symbolics**     ; to v
 If you are using a standard Mac or PC keyboard, i.e with numeric keypad, Symbolics specific keys are located on the keys shown below:  
   
 | Key: | Key Value: | Mod Key: | Mod Key Value: | Comment: |
-| --- | --- | --- | --- | --- |
+|:--- |:--- |:--- |:--- |:--- |
 | F1 | Select |   |   |   |
 | F2 | Network |   |   |   |
 | F3 | Function |   |   |   |
@@ -921,8 +909,7 @@ Going back, you may wish to restore the initial Debian key mappings, using:
 $ **xmodmap ~/xmodmap.deb**     # restores the initial Debian key mappings.  
   
   
-Send the Lisp Listener screen to the X Server of a LAN host:  
-------------------------------------------------------------  
+## Send the Lisp Listener screen to the X Server of a LAN host
   
 Send the Dynamic Lisp Listener of the OG2 VLM Kronos to the X Server XQuartz of the macOS LAN host SERVER, as follows:  
   
@@ -960,8 +947,7 @@ Halt OG2 on Kronos:
 command:  **halt  genera  :query  no**  
   
   
-Install and set up a Telnet service onto a Debian-based host:  
--------------------------------------------------------------  
+## Install and set up a Telnet service onto a Debian-based host
   
 Cold boot and log into Debian Genera-host Jupiter if not already running:  
 $ Login: **jm**  
@@ -1003,9 +989,8 @@ ptys
 Remove the Debian-x.y.z-amd64-DVD-1.iso from the VirtualBox’s Optical Drive. Close LXTerminal, shut down Jupiter, and re-export the Symbolics.ova appliance including the updated Debian LXDE and Telnet configuration files.  
   
   
-Connect from OG2 to its Debian-based Genera-host via Telnet:  
-------------------------------------------------------------  
-
+## Connect from OG2 to its Debian-based Genera-host via Telnet
+  
 Cold boot Debian host Jupiter  
 $ Login: **jm**  
 password: ********  
