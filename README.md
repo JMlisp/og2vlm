@@ -38,6 +38,7 @@ Besides OG2VLM, the following JMlisp private repositories include OG2 system sof
 - Enable Debian's X Server to accept OG2 Client requests
 - Install and set up REXEC on a Debian-based Genera-host
 - Access a VLM's and an iMach's LMFS and FEP FS via NFILE
+- Increase the size of the [LMFS storage](https://github.com/JMlisp/og2vlm/blob/main/screenshots/KRONOS%20LMFS%20Free%20Records%20on%20FEP0%20and%20FEP1.png) capacity of a VLM
 
 **OG2clients**:  Build an OG2 Client VLM on a Debian-based Genera-host:  
 - Create [OG2 Client](https://github.com/JMlisp/og2vlm/blob/main/screenshots/TITAN%20Client%20on%20JUPITER.png) VLMs
