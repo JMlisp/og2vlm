@@ -967,7 +967,7 @@ Halt OG2 on Kronos:
 >  halt  genera  :query  no
 
 Going back, you may wish to restore the initial Debian key mappings, using: 
-$ xmodmap ~/xmodmap.deb # restores the initial Debian key mappings.
+$ xmodmap ~/xmodmap.deb       # restores the initial Debian key mappings.
 
 
 Send the Lisp Listener screen to the X Server of a LAN host:
@@ -1039,7 +1039,7 @@ log_on_failure += USERID
 EOF
 
 Initialise Terminal to VT100 as default:   # this is required Debian 10 onwards!
-$ cat .bash_profile << EOF
+$ cat >> .bash_profile << EOF
 # Set Terminal default to VT100:
 export TERM = vt100
 EOF
@@ -1079,8 +1079,8 @@ jm@jupiter:~$ ls /home/jm/
 ........
 ........
 
-jm@jupiter:~$ su -   # change to root
-Password: ****   # type in jupiter's root password
+jm@jupiter:~$ su -   # change to root
+Password: ****       # type in jupiter's root password
 
 root@jupiter~# ls /
 ........
