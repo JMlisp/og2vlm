@@ -156,7 +156,7 @@ password:  **root-password**
 root:  **cd  /media/cdrom0/**  
   
 Install VirtualBox Linux Guest Additions:  
-root:  **sh  ./VBoxLinuxAdditions.run**       ; Should this fail, reboot Debian and try again.  
+root:  **sh  ./VBoxLinuxAdditions.run**       # Should this fail, reboot Debian and try again.  
  
 Following completion of “Building Guest Additions kernel modules” and “Starting the VirtualBox Guest Additions” it is recommended to restart Debian. I.e, in xterm enter:  
 root:  **cd**  
@@ -199,7 +199,7 @@ Unzip genera.zip and copy the Genera Fonts in macOS folder /usr/X11/share/fonts/
   
 Your Genera-host has been called “jupiter”. Assuming the host to run OG2 will be called "kronos", in your Mac’s Terminal (xterm) Preferences>Profiles>Basic>Shell check “Run inside shell” and “Run command” and in the command field include the following:  
   
-xhost +kronos +jupiter; xset +fp /usr/X11/share/fonts/genera     ; this will also start XQuartz once xterm gets started.  
+xhost +kronos +jupiter; xset +fp /usr/X11/share/fonts/genera     # this will also start XQuartz once xterm gets started.  
   
 Preferably in “Prompt/Ask before closing”, include telnet, ssh, rlogin and slogin. And, in Preferences>Profiles>Basic>Advanced>Terminfo, Declare terminal as: xterm  
   
@@ -437,7 +437,7 @@ $  **./genera  -network  "tap0:INTERNET|192.168.6.2;gateway=192.168.6.1"**
 command:  **login lisp-machine**  
 
 Toggle more processing, i.e enter:  
-**Function M**          # key in F3 followed by M  
+**Function M**          ; key in F3 followed by M  
   
 Create and attach FEP disks:  
   
@@ -505,7 +505,7 @@ $  **./genera  -network  "tap0:INTERNET|192.168.6.2;gateway=192.168.6.1"**
   
 command:  **login  lisp-machine**  
  
-**Function M**          # key in F3 followed by M  
+**Function M**          ; key in F3 followed by M  
   
 Attach the disk FEP0:  
 command:  **(storage:attach-disk-channel  (fs:parse-pathname  “HOST:/home/jm/vlm/fep0.dsk”))**  
@@ -586,7 +586,7 @@ Start OG2 in unprivileged mode, using the shellscript “og2vlm.sh” containing
 $  **./og2vlm.sh**  
   
 command:  **login  lisp-machine**  
-**Function M**          # key in F3 followed by M  
+**Function M**          ; key in F3 followed by M  
   
 Verify that following commands return system initialisation lists as last elements, regarding FEP disk-attachment and detachment:
   
@@ -636,7 +636,7 @@ Start OG2 VLM, i.e in LXTerminal enter:
 $  **./og2vlm.sh**  
   
 command:  **login   lisp-machine**  
-**Function M**          # key in F3 followed by M  
+**Function M**          ; key in F3 followed by M  
   
 command:  **load  file  sys:site;nfsv3.translations.newest**  
 command:  **(setq  rpc::*unix-check-passwords-for-show*  nil)**  
@@ -768,7 +768,7 @@ Start the VLM and verify it can access Internet hosts via NFS, i.e enter:
 $  **./og2vlm.sh**  
   
 command:  **login  lisp-machine**  
-**Function M**          # key in F3 followed by M  
+**Function M**          ; key in F3 followed by M  
   
 Create a namespace object “server”, to enable the VLM KRONOS access the host SERVER (and the other way around), via the virtual interface tap0 and the genera-host JUPITER:  
 command:  **create  namespace  object  host  server**  
@@ -862,7 +862,7 @@ Warm-boot OG2 VLM after the above changes, i.e in LXTerminal enter:
 $  **./og2vlm.sh**  
   
 command:  **login   lisp-machine**  
-**Function M**          # key in F3 followed by M  
+**Function M**          ; key in F3 followed by M  
   
 If you are using a real Symbolics space-cadet keyboard on a Mac or PC enter:   
 command:  **Show Keyboard Layout (a keyboard-layout) Symbolics**     ; to verify key strokes  
@@ -934,7 +934,7 @@ Boot the OG2 VLM Kronos, i.e in an LXTerminal enter:
 $ **./og2vlm.sh**  
   
 command: **login lisp-machine**  
-**Function M**          # key in F3 followed by M  
+**Function M**          ; key in F3 followed by M  
   
 Send the Kronos Dynamic Lisp Listener screen to the LAN host SERVER, specifying the appropriate screen geometry:  
 command: **Start X screen (the name of a host) SERVER (keywords) :geometry (a string) 1280x960+640+120**  
@@ -972,7 +972,7 @@ log_on_failure += USERID
 **EOF**  
   
 Initialise Terminal to VT100 as default:   # this is required Debian 10 onwards!  
-$ **cat .bash_profile << EOF**  
+$ **cat >> .bash_profile << EOF**  
 
 **#** Set Terminal default to VT100:  
 export TERM = vt100  
@@ -1001,7 +1001,7 @@ $ **./og2vlm.sh**
 command: **login lisp-machine**  
   
 Toggle more processing, i.e enter:  
-**Function M**          # key in F3 followed by M  
+**Function M**          ; key in F3 followed by M  
   
 command: **select activity (activity name) terminal**   ; alternatively type in "Select T"  
   
