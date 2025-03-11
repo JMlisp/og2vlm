@@ -51,6 +51,7 @@ Besides OG2VLM, the following JMlisp private repositories include OG2 system sof
 - Security issues regarding Plain Remote Port Forwarding and Xnest
 - OG2 VLM Operation over the Internet via Plain [Remote Port Forwarding](https://github.com/JMlisp/og2vlm/blob/main/screenshots/Port%20Forwarding%20KRONOS%20Lisp%20Listener%201%20to%20MBP.png)
 - OG2 Client VLM Remote Operation over the Internet via Xnest
+- OG2 Client VLM Operation over the Internet via Plain Remote Port Forwarding
 
 **OG2glx**:  Implement and run OpenGL applications on a Debian-based OG2 VLM:  
 - Prepare macOS to accept OpenGL IndirectGLX requests
