@@ -3,11 +3,7 @@ Open Genera 2 Virtual Lisp Machine emulator for Debian Linux
 
 OG2VLM is the main JMlisp OG2 repository of a Workgroup of Symbolics machines and DEC Alpha VLM workstation users, whose goal it is to keep OG2 and associated OG2 systems alive and, based on Brad Parker's great work of adapting the Alpha version to x86_64, to provide bug fixes for still remaining problems, and maintain OG2 on Debian-based Linux platforms as well. 
 
-The OG2VLM repository provides a ready to use OG2 distribution world that includes both NFSv3 Client and LMFS capability for the VLM, translation files, genera binaries for X86 and Xeon platforms, as well as functions and commands necessary to create FEP disks, a LMFS partition, and an Initial world, without the need to disable Debian’s calendar clock prior to the installation and the subsequent launch of OpenGenera.
-
-It also includes a step-by-step procedure, in both Markdown and Text format, that describes how to emulate a Symbolics VLM and run in unprivileged mode a tap-controlled, purely LMFS-based, and NFSv3-capable OG2 in Debian, which can be run either as a Virtual Machine in VirtualBox or on its own disk or partition, on macOS and Windows hosts. 
-
-The OG2VLM repository also includes screenshots, accessible via hyperlinks from within the procedure in Markdown format, showing what the OG2 screen looks like while implementing key steps and running saved worlds. However, it does not include the official Symbolics OG2 distribution, which you will need to download from a website referenced in the procedure and use it in your own responsibility regarding ownership rights.
+The OG2VLM is a public repository that provides a contents overview of the following private repositories, which include OG2 system software and sources for debugging purposes, vendor-provided systems, initialisation files and procedures in both Markdown and Text format, patches and feature enhancements, and even the possibility, but for Workgroup members only, to create and upload new OG2 Distribution Worlds, as stated below:
 
 **OG2vlm**:  Install OG2 on a Debian-based Genera-host on Macs and PCs:  
 - Install VirtualBox and Debian onto your PC or Mac
@@ -24,8 +20,6 @@ The OG2VLM repository also includes screenshots, accessible via hyperlinks from 
 - Send the Lisp Listener screen to the X Server of a LAN host
 - Install and set up a Telnet service onto a Debian-based host
 - Connect from OG2 to its Debian-based Genera-host via Telnet
-
-Besides OG2VLM, the following JMlisp private repositories include OG2 system software and sources for debugging purposes, vendor-provided systems, initialisation files and procedures in both Markdown and Text format, patches and feature enhancements, and even the possibility, but for Workgroup members only, to create and upload new OG2 Distribution Worlds, as stated below:
 
 **OG2WG**:  Enable VLMs to run OG2 worlds that include advanced features:  
 - OG2VLM advanced setup
