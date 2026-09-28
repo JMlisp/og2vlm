@@ -5,7 +5,7 @@ OG2VLM is the main JMlisp OG2 repository of a Workgroup of Symbolics machines an
 
 The OG2VLM is a public repository that provides a contents overview of the following private repositories, which include OG2 system software and sources for debugging purposes, vendor-provided systems, initialisation files and procedures in both Markdown and Text format, patches and feature enhancements, and even the possibility, but for Workgroup members only, to create and upload new OG2 Distribution Worlds, as stated below:
 
-**OG2std**:  Install OG2 on a Debian-based Genera-host on Macs and PCs:  
+**OG2smbx**:  Install OG2 on a Debian-based Genera-host on Macs and PCs:  
 - Install VirtualBox and Debian onto your PC or Mac
 - Install Guest Additions onto VirtualBox Debian
 - Make macOS ready for OpenGenera
